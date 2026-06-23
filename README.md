@@ -6,6 +6,8 @@ The original notebooks use [Keras 3](https://keras.io) and support JAX, TensorFl
 
 > Original repository: [fchollet/deep-learning-with-python-notebooks](https://github.com/fchollet/deep-learning-with-python-notebooks)
 
+This is my LLM-assisted translation of the original Keras notebooks into PyTorch, created to help me learn *Deep Learning with Python* using native PyTorch.
+
 ## Table of contents
 
 | Chapter | Topic |

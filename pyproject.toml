@@ -1,0 +1,27 @@
+[project]
+name = "deep-learning-with-pytorch-notebooks"
+version = "0.1.0"
+description = "PyTorch ports of the companion notebooks for Deep Learning with Python"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["torch", "torchvision", "numpy"]
+
+[dependency-groups]
+dev = ["mypy>=2.1.0", "ruff>=0.15.13"]
+
+# CUDA 12.8
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+# RoCM 7.2
+[[tool.uv.index]]
+name = "pytorch-rocm"
+url = "https://download.pytorch.org/whl/rocm7.2"
+explicit = true
+
+# Pin torch to CUDA 12.8 index
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
